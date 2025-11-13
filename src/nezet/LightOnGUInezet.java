@@ -8,12 +8,12 @@ package nezet;
  *
  * @author NádasViktóriaMária(S
  */
-public class _LightOnGUInezet extends javax.swing.JFrame {
+public class LightOnGUInezet extends javax.swing.JFrame {
 
     /**
      * Creates new form _LightOnGUInezet
      */
-    public _LightOnGUInezet() {
+    public LightOnGUInezet() {
         initComponents();
     }
 
@@ -170,12 +170,13 @@ public class _LightOnGUInezet extends javax.swing.JFrame {
 
         jPanelCimKeret.setBorder(javax.swing.BorderFactory.createMatteBorder(12, 12, 12, 12, new java.awt.Color(102, 0, 51)));
 
-        jTextFieldCim.setBackground(new java.awt.Color(242, 242, 242));
+        jTextFieldCim.setEditable(false);
         jTextFieldCim.setFont(new java.awt.Font("Snap ITC", 0, 48)); // NOI18N
         jTextFieldCim.setForeground(new java.awt.Color(0, 102, 0));
         jTextFieldCim.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextFieldCim.setText("Light On!");
         jTextFieldCim.setBorder(null);
+        jTextFieldCim.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jTextFieldCim.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldCimActionPerformed(evt);
@@ -281,28 +282,13 @@ public class _LightOnGUInezet extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(_LightOnGUInezet.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(_LightOnGUInezet.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(_LightOnGUInezet.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(_LightOnGUInezet.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
+        
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new _LightOnGUInezet().setVisible(true);
+                new LightOnGUInezet().setVisible(true);
             }
         });
     }
