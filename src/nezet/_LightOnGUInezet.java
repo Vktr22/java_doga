@@ -41,11 +41,15 @@ public class _LightOnGUInezet extends javax.swing.JFrame {
         jPanelCimKeret = new javax.swing.JPanel();
         jTextFieldCim = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu = new javax.swing.JMenu();
+        jMenuBetolt = new javax.swing.JMenu();
+        jMenuItemMentes = new javax.swing.JMenuItem();
+        jMenuItemBetolt = new javax.swing.JMenuItem();
         jMenuItem1ujJatek = new javax.swing.JMenuItem();
         jMenuItemKilepes = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanelJatekTer.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 12, 12, 12, new java.awt.Color(102, 0, 0)));
 
         jButton1.setBackground(new java.awt.Color(51, 204, 0));
         jButton1.setPreferredSize(new java.awt.Dimension(60, 60));
@@ -58,10 +62,14 @@ public class _LightOnGUInezet extends javax.swing.JFrame {
             }
         });
 
+        jLabelLepesSzamlalo.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        jLabelLepesSzamlalo.setForeground(new java.awt.Color(0, 102, 0));
         jLabelLepesSzamlalo.setText("Lépés számláló:");
 
+        jTextField1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField1.setText("0");
+        jTextField1.setEnabled(false);
 
         jButton3.setBackground(new java.awt.Color(51, 204, 0));
         jButton3.setPreferredSize(new java.awt.Dimension(60, 60));
@@ -153,7 +161,7 @@ public class _LightOnGUInezet extends javax.swing.JFrame {
                     .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
                 .addGroup(jPanelJatekTerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelLepesSzamlalo)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -181,7 +189,7 @@ public class _LightOnGUInezet extends javax.swing.JFrame {
             .addGroup(jPanelCimKeretLayout.createSequentialGroup()
                 .addGap(90, 90, 90)
                 .addComponent(jTextFieldCim, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(93, Short.MAX_VALUE))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
         jPanelCimKeretLayout.setVerticalGroup(
             jPanelCimKeretLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -191,17 +199,34 @@ public class _LightOnGUInezet extends javax.swing.JFrame {
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
+        jMenuBar1.setBackground(new java.awt.Color(242, 242, 242));
         jMenuBar1.setBorder(javax.swing.BorderFactory.createMatteBorder(12, 12, 0, 12, new java.awt.Color(102, 0, 51)));
 
-        jMenu.setText("Menü");
+        jMenuBetolt.setForeground(new java.awt.Color(102, 0, 0));
+        jMenuBetolt.setText("Menü");
+        jMenuBetolt.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
 
+        jMenuItemMentes.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jMenuItemMentes.setForeground(new java.awt.Color(0, 102, 0));
+        jMenuItemMentes.setText("Mentés");
+        jMenuBetolt.add(jMenuItemMentes);
+
+        jMenuItemBetolt.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jMenuItemBetolt.setForeground(new java.awt.Color(0, 102, 0));
+        jMenuItemBetolt.setText("Betöltés");
+        jMenuBetolt.add(jMenuItemBetolt);
+
+        jMenuItem1ujJatek.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jMenuItem1ujJatek.setForeground(new java.awt.Color(204, 102, 0));
         jMenuItem1ujJatek.setText("Új játék");
-        jMenu.add(jMenuItem1ujJatek);
+        jMenuBetolt.add(jMenuItem1ujJatek);
 
+        jMenuItemKilepes.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jMenuItemKilepes.setForeground(new java.awt.Color(102, 0, 0));
         jMenuItemKilepes.setText("Kilépés");
-        jMenu.add(jMenuItemKilepes);
+        jMenuBetolt.add(jMenuItemKilepes);
 
-        jMenuBar1.add(jMenu);
+        jMenuBar1.add(jMenuBetolt);
 
         setJMenuBar(jMenuBar1);
 
@@ -216,8 +241,8 @@ public class _LightOnGUInezet extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jPanelCimKeret, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanelJatekTer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanelJatekTer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -293,10 +318,12 @@ public class _LightOnGUInezet extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabelLepesSzamlalo;
-    private javax.swing.JMenu jMenu;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu jMenuBetolt;
     private javax.swing.JMenuItem jMenuItem1ujJatek;
+    private javax.swing.JMenuItem jMenuItemBetolt;
     private javax.swing.JMenuItem jMenuItemKilepes;
+    private javax.swing.JMenuItem jMenuItemMentes;
     private javax.swing.JPanel jPanelCimKeret;
     private javax.swing.JPanel jPanelJatekTer;
     private javax.swing.JTextField jTextField1;
