@@ -22,7 +22,7 @@ public class LampakModell {
 
     public LampaModell getLampa(int sor, int oszlop) {
         ellenorizIndex(sor, oszlop);
-        return lampak[indexFromCoords(sor, oszlop)];
+        return lampak[indexSorOszlopbol(sor, oszlop)];
     }
 
     public int getLepesszam() {
@@ -52,7 +52,7 @@ public class LampakModell {
 
     private void kapcsol(int sor, int oszlop) {
         ellenorizIndex(sor, oszlop);
-        lampak[indexFromCoords(sor, oszlop)].kapcsol();
+        lampak[indexSorOszlopbol(sor, oszlop)].kapcsol();
     }
 
     public void ujJatek() {
