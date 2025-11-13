@@ -1,20 +1,21 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package main;
 
-/**
- *
- * @author NádasViktóriaMária(S
- */
-public class LightOnPrg {
+import javax.swing.SwingUtilities;
+import modell.LampakModell;
+import nezet.LightOnGUInezet;
+import vezerlo.LightOnPrgVezerlo;
 
-    /**
-     * @param args the command line arguments
-     */
+public class LightOnPrg {
     public static void main(String[] args) {
-        // TODO code application logic here
+        SwingUtilities.invokeLater(() -> {
+            LampakModell modell = new LampakModell();
+            LightOnGUInezet nezet = new LightOnGUInezet();
+            // A vezérlő megkeresi a GUI komponenseit a hierarchiából,
+            // ezért nem kell megváltoztatni a nezet fájlt.
+            new LightOnPrgVezerlo(modell, nezet);
+            nezet.setVisible(true);
+        });
     }
     
 }
